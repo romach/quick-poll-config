@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:mem:testdb;sql.pad_space=false
+  profiles:
+    active: default
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8083/eureka/
